@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher</title>
+  </head>
+  <body>
+    <h1>Caesar Cipher</h1>
+
+    <textarea
+      style="width: 700px; height: 150px"
+      id="text"
+      rows="10"
+      column="800"
+    ></textarea>
+    <!--- Taking input using textarea -->
+
+    <br />
+    <label for="key">Key:</label>
+    <!--- Taking key as input with max value of 25 -->
+    <input id="key" type="number" min="0" max="25" /> <br /><br />
+
+    <!--- Button for encryption -->
+    <input type="submit" value="Encrypt" onclick="encrypt()" />
+
+    <!--- Button for decryption -->
+    <input type="submit" value="Decrypt" onclick="decrypt()" />
+
+    <!--- Button for brute force -->
+    <input type="submit" value="Brute Force" onclick="bruteForce()" />
+
+    <!--- Button for frequency analysis -->
+    <input
+      type="submit"
+      value="Frequency Analysis"
+      onclick="frequencyAnalysis()"
+    />
+
+    <!--- Button to go to next less frequency character -->
+    <input type="submit" value="Next" onclick="Next()" />
+
+    <!--- Result of encryption or decryption -->
+    <h2 id="result"></h2>
+
+    <!--- Javascript file -->
+    <script src="caesar.js"></script>
+  </body>
+</html>
